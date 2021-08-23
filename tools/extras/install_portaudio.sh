@@ -55,8 +55,8 @@ if [ ! -e pa_stable_$VERSION.tgz ]; then
         $WGET -T 10 -t 3 https://github.com/PortAudio/portaudio/archive/refs/tags/pa_stable_v19_20111121_r1788.tar.gz
     fi
 
-    if [ ! -e pa_stable_$VERSION.tgz ]; then
-        echo "Download of pa_stable_$VERSION.tgz - failed!"
+    if [ ! -e pa_stable_v19_20111121_r1788.tar.gz ]; then
+        echo "Download of pa_stable_v19_20111121_r1788.tar.gz - failed!"
         echo "Aborting script. Please download and install port audio manually!"
         exit 1;
     fi

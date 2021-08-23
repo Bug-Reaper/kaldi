@@ -52,7 +52,7 @@ if [ ! -e pa_stable_$VERSION.tgz ]; then
             echo "http://www.portaudio.com/download.html)"
             exit 1;
         fi
-        $WGET -T 10 -t 3 http://www.portaudio.com/archives/pa_stable_$VERSION.tgz
+        $WGET -T 10 -t 3 https://github.com/PortAudio/portaudio/archive/refs/tags/pa_stable_v19_20111121_r1788.tar.gz
     fi
 
     if [ ! -e pa_stable_$VERSION.tgz ]; then
@@ -62,7 +62,8 @@ if [ ! -e pa_stable_$VERSION.tgz ]; then
     fi
 fi
 
-tar -xovzf pa_stable_$VERSION.tgz || exit 1
+tar -xovzf pa_stable_v19_20111121_r1788.tar.gz || exit 1
+mv portaudio-pa_stable_v19_20111121_r1788 portaudio
 
 read -d '' pa_patch << "EOF"
 --- portaudio/Makefile.in	2012-08-05 10:42:05.000000000 +0300
